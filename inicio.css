@@ -1,0 +1,177 @@
+:root {
+    --korean-red: #C91F37;
+    --korean-blue: #0047A0;
+    --korean-light-blue: #94B3D1;
+    --korean-black: #333333;
+    --korean-white: #FFFFFF;
+    --korean-light-gray: #F4F4F4;
+    --korean-beige: #F5F1E8;
+    --korean-gold: #D4AF37;
+}
+
+
+body {
+    font-family: 'Noto Sans KR', sans-serif;
+    padding: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: var(--korean-beige);
+    color: var(--korean-black);
+    line-height: 1.6;
+}
+
+h1 {
+    color: var(--korean-red);
+    text-align: center;
+    font-weight: 700;
+    margin-bottom: 10px;
+    text-shadow: 1px 1px 1px rgba(0,0,0,0.1);
+}
+
+.subtitle {
+    text-align: center;
+    color: #666; 
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+.game-container {
+    background-color: var(--korean-white);
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    margin-bottom: 20px;
+    position: relative;
+    overflow: hidden;
+}
+
+button {
+    padding: 8px 16px;
+    margin: 5px;
+    cursor: pointer;
+    border: none;
+    border-radius: 4px;
+    font-family: inherit;
+    font-weight: 500;
+    font-size: 14px;
+    transition: all 0.3s ease;
+    background-color: var(--korean-light-blue);
+    color: var(--korean-white);
+}
+
+button:hover {
+    opacity: 0.9;
+    transform: translateY(-2px);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    transform: none;
+}
+
+.start-btn {
+    background-color: var(--korean-blue);
+    color: white;
+    font-weight: bold;
+}
+
+.reset-btn {
+    background-color: var(--korean-red);
+    color: white;
+}
+
+.category-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 15px 0;
+}
+
+.category-btn, .mode-btn {
+    margin: 4px;
+    background-color: var(--korean-light-gray);
+    color: var(--korean-black);
+    border: 1px solid #ddd;
+}
+
+.category-btn.active, .mode-btn.active {
+    background-color: var(--korean-blue);
+    color: var(--korean-white);
+    font-weight: bold;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+.mode-selector {
+    display: flex;
+    justify-content: center;
+    margin: 15px 0;
+}
+
+.game-content {
+    background-color: var(--korean-white);
+    border-radius: 10px;
+    padding: 20px;
+    margin: 15px 0;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    min-height: 200px;
+}
+
+.control-buttons {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.game-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+.score, .time {
+    padding: 8px 12px;
+    background-color: var(--korean-light-blue);
+    color: var(--korean-white);
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+.instructions {
+    background-color: #E7F4FF;
+    padding: 15px;
+    border-radius: 8px;
+    border-left: 4px solid #0047A0;
+    margin-top: 20px;
+}
+
+.instructions h3 {
+    margin-top: 0;
+    color: #0047A0;
+}
+
+.motivational {
+    margin-bottom: 0;
+    font-style: italic;
+    text-align: center;
+}
+
+/* Korean pattern decorative element */
+.game-container::before {
+    content: "";
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 50px;
+    height: 50px;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='50' height='50' viewBox='0 0 50 50'%3E%3Cpath fill='%230047A0' fill-opacity='0.1' d='M25,0 L50,25 L25,50 L0,25 L25,0z M20,20 L20,30 L30,30 L30,20 L20,20z'/%3E%3C/svg%3E");
+    opacity: 0.5;
+    z-index: 0;
+}
+
+/* Utilidades generales */
+.hidden {
+    display: none;
+}

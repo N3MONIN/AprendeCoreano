@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aprende Coreano - Juego Simple</title>
+    <link rel="stylesheet" href="css/inicio.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <h1>¡Aprende Coreano Jugando!</h1>
+    <p class="subtitle">한국어를 재미있게 배우세요!</p>
+    
+    <div class="game-container">
+        <div class="game-header">
+            <span class="score">Puntuación: <span id="score">0</span></span>
+            <span class="time">Tiempo: <span id="time">00:00</span></span>
+        </div>
+
+        <div id="categorySelector" class="category-container">
+            <!-- Las categorías se cargarán dinámicamente -->
+        </div>
+
+        <div class="mode-selector">
+            <button class="mode-btn active" data-mode="matching">Emparejar</button>
+            <button class="mode-btn" data-mode="flashcards">Flashcards</button>
+            <button class="mode-btn" data-mode="quiz">Prueba</button>
+        </div>
+
+        <div id="gameContent" class="game-content">
+            <!-- El contenido del juego se cargará aquí dinámicamente -->
+        </div>
+
+        <div class="control-buttons">
+            <button id="startBtn" class="start-btn">Empezar</button>
+            <button id="resetBtn" class="reset-btn">Reiniciar</button>
+        </div>
+    </div>
+
+    <div class="instructions">
+        <h3>Instrucciones:</h3>
+        <ul>
+            <li><strong>Modo Emparejar:</strong> Conecta las palabras coreanas con su traducción en español</li>
+            <li><strong>Modo Flashcards:</strong> Practica palabras una a una, haz clic para ver la traducción</li>
+            <li><strong>Modo Prueba:</strong> Pon a prueba tu conocimiento con preguntas de opción múltiple</li>
+            <li><strong>Categorías:</strong> Selecciona una categoría específica o practica con todas las palabras</li>
+        </ul>
+        <p class="motivational">화이팅! (¡Ánimo!)</p>
+    </div>
+
+    <!-- Carga de scripts -->
+    <script src="js/vocabulario.js"></script>
+    <script src="js/emparejar.js"></script>
+    <script src="js/flashcards.js"></script>
+    <script src="js/quiz.js"></script>
+    <script src="js/inicio.js"></script>
+</body>
+</html>
